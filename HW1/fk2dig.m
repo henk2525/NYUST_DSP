@@ -1,52 +1,58 @@
-function keydig = fk2dig(keyL,keyH)
+function keydig = fk2dig(keyL,keyH, N)
 
-if keyL==18&&keyH==31 
-	keydig='1';
-end
-if keyL==18&&keyH==34 
-	keydig='2';
-end
-if keyL==18&&keyH==38 
-	keydig='3';
-end  
-if keyL==18&&keyH==42 
-	keydig='A';
-end
-if keyL==20&&keyH==31 
-	keydig='4';
-end
-if keyL==20&&keyH==34 
-	keydig='5';
-end
-if keyL==20&&keyH==38 
-	keydig='6';
-end  
-if keyL==20&&keyH==42 
-	keydig='B';
-end
-if keyL==22&&keyH==31 
-	keydig='7';
-end
-if keyL==22&&keyH==34 
-	keydig='8';
-end
-if keyL==22&&keyH==38 
-	keydig='9';
-end  
-if keyL==22&&keyH==42 
-	keydig='C';
-end
-if keyL==24&&keyH==31 
-	keydig='*';
-end
-if keyL==24&&keyH==34 
-	keydig='0';
-end
-if keyL==24&&keyH==38 
-	keydig='#';
-end  
-if keyL==24&&keyH==42 
-	keydig='D';
-end
+    f=[697 770 852 941 1209 1336 1477 1633];
+    fs=8000;
+    df=fs/N;       
+    k=round(f/df);
+    k=k+1;
+    
+    if keyL==k(1)&&keyH==k(5) 
+        keydig='1';
+    end
+    if keyL==k(1)&&keyH==k(6) 
+        keydig='2';
+    end
+    if keyL==k(1)&&keyH==k(7) 
+        keydig='3';
+    end  
+    if keyL==k(1)&&keyH==k(8)
+        keydig='A';
+    end
+    if keyL==k(2)&&keyH==k(5)
+        keydig='4';
+    end
+    if keyL==k(2)&&keyH==k(6) 
+        keydig='5';
+    end
+    if keyL==k(2)&&keyH==k(7)
+        keydig='6';
+    end  
+    if keyL==k(2)&&keyH==k(8)
+        keydig='B';
+    end
+    if keyL==k(3)&&keyH==k(5)
+        keydig='7';
+    end
+    if keyL==k(3)&&keyH==k(6) 
+        keydig='8';
+    end
+    if keyL==k(3)&&keyH==k(7)
+        keydig='9';
+    end  
+    if keyL==k(3)&&keyH==k(8)
+        keydig='C';
+    end
+    if keyL==k(4)&&keyH==k(5)
+        keydig='*';
+    end
+    if keyL==k(4)&&keyH==k(6) 
+        keydig='0';
+    end
+    if keyL==k(4)&&keyH==k(7)
+        keydig='#';
+    end  
+    if keyL==k(4)&&keyH==k(8)
+        keydig='D';
+    end
 
 end

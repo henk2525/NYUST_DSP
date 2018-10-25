@@ -16,11 +16,9 @@ for m = 1:Len
     Fs1 = fft(s1);
     MFs1 = abs(Fs1);
     %figure; stem(MFs1(1:round(N/2)),'filled');
-    [KL KH] = findk(MFs1,N);               %Find low and high band
-    output(m) = fk2dig(KL, KH);            %Find dig by low and high band
+    [KL, KH] = findk(MFs1,N);               %Find low and high band
+    output(m) = fk2dig(KL, KH, N);          %Find dig by low and high band
 end
 output = char(output);
 disp('The number are');
 disp(output);
-
-
