@@ -2,6 +2,8 @@
 NYUST(Yuntech) 107/1 (高等數位信號處理, Advanced Digital Signal Processing).
 
 |Folder|Description|
-|:------|----------|
+|-------|----------|
 |HW01|Detection of DTMF Signals|
 |HW02|Voice Privacy|
+|HW03|Hum Noise Removal|
+|HW04|Adaptive Noise Cancellation|
